@@ -1,0 +1,77 @@
+<HTML>
+   <HEAD>
+   
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+   
+<style>
+img {max-width:100%;
+}
+
+.portrait {
+	display:none;
+	}
+.landscape {
+	display:none;
+	}
+</style>
+
+   </HEAD>
+   
+   
+   <BODY>
+   
+
+
+
+<div id="portrait">
+	<a href="#" id="Banner1">
+	hi
+	</a>
+</div>
+
+<div id="landscape">
+	<a href="#" id="Banner2">
+	bye
+	</a>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+window.onload = handleOrientation;
+window.addEventListener('orientationchange', handleOrientation, false);
+function handleOrientation() {
+    if (window.orientation == "90" || window.orientation == "-90") {
+        document.getElementById("portrait").style.display = 'inline';
+        document.getElementById("landscape").style.display = 'none';
+    } else {
+        document.getElementById("portrait").style.display = 'none';
+        document.getElementById("landscape").style.display = 'inline'
+    }
+}
+
+
+// generate url
+
+	var DeviceOS = 'iPhone';
+	var TokenID = 'iPhone2';
+		
+	var myURL = 'http://affiliate.idgtracker.com/rd/r.php?sid=606&pub=300059&bid=496&c1=' + DeviceOS + '&c2=360x173&c3=' + TokenID + '';
+		document.getElementById('Banner1').href = myURL;
+
+	var myURL = 'http://affiliate.idgtracker.com/rd/r.php?sid=606&pub=300059&bid=496&c1=' + DeviceOS + '&c2=360x173&c3=' + TokenID + '';
+		document.getElementById('Banner2').href = myURL;
+	
+		
+
+</script>
+
+   </BODY>
+</HTML>
